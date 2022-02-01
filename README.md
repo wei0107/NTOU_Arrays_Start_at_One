@@ -1,5 +1,10 @@
 # NTOU_Arrays_Start_at_One
 
+## Codebook
+參考[NYCU_gAwr_gurA](https://github.com/nella17/NYCU_gAwr_gurA)
+參考[allem40306/Codebook_Sample](https://github.com/allem40306/Codebook_Sample.git)
+參考NTOU競賽程式
+
 ## Training
 
 > A:  賽中 AC <br>
