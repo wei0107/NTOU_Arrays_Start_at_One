@@ -7,8 +7,8 @@
 - [**NYCU_gAwr_gurA**](https://github.com/nella17/NYCU_gAwr_gurA)
 - [**allem40306/Codebook_Sample**](https://github.com/allem40306/Codebook_Sample.git)
 - **NTOU競賽程式**
-- **NCTU PCCA Winter-Camp**
-- **2018 ION Camp**
+- **NCTU PCCA 2022 Winter-Camp**
+- **NTHU 2018 ION Camp**
 
 ## Training
 
