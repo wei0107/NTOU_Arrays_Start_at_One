@@ -8,7 +8,7 @@
 - [**allem40306/Codebook_Sample**](https://github.com/allem40306/Codebook_Sample.git)
 - **NTOU競賽程式**
 - **NCTU PCCA Winter-Camp**
-- **2018 ION C**
+- **2018 ION Camp**
 
 ## Training
 
