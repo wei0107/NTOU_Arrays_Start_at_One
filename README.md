@@ -1,12 +1,14 @@
 # NTOU_Arrays_Start_at_One
 
 ## Codebook
-參考 [**NYCU_gAwr_gurA**](https://github.com/nella17/NYCU_gAwr_gurA)<br>
-參考 [**allem40306/Codebook_Sample**](https://github.com/allem40306/Codebook_Sample.git)<br>
-參考 **NTOU競賽程式**<br>
-參考 **NCTU PCCA Winter-Camp**
 
-**林一 2022/02/02**
+**by 林一 2022/02/02**
+### References
+- [**NYCU_gAwr_gurA**](https://github.com/nella17/NYCU_gAwr_gurA)
+- [**allem40306/Codebook_Sample**](https://github.com/allem40306/Codebook_Sample.git)
+- **NTOU競賽程式**
+- **NCTU PCCA Winter-Camp**
+- **2018 ION C**
 
 ## Training
 
