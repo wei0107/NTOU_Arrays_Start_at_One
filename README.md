@@ -6,6 +6,7 @@
 ### References
 - [**NYCU_gAwr_gurA**](https://github.com/nella17/NYCU_gAwr_gurA)
 - [**allem40306/Codebook_Sample**](https://github.com/allem40306/Codebook_Sample.git)
+- [**jakao0907**](https://github.com/jakao0907/CompetitiveProgrammingCodebook)
 - **NTOU Introduction to Competitive Programming**
 - **NCTU PCCA 2022 Winter-Camp**
 - **NTHU 2018 ION Camp**
