@@ -1,3 +1,4 @@
+/*Dijkstra's algorithm 單源最短路徑*/
 #define MAX_V 100
 #define INF 10000
 
@@ -35,25 +36,18 @@ void dijkstra(int vn, int s) {
 }
 
 int main() {
-	cin.tie(0);
-	ios_base::sync_with_stdio(false);
-
-	int start, u, v, w, i, j, ans;
-	set <int> myset;
-
-	//input
-	cin >> start;
-	Edge node;
-	while (cin >> u >> v >> w) {
-		node.idx = v; node.w = w;
-		myset.insert(u);
-		myset.insert(v);
-		adj[u].push_back(node);
-	}
-
-	dijkstra(myset.size(), start);
-	for (auto i : myset) {
-		printf("%d: %d\n", i, dist[i]);
-	}
+    int start, end, u, v, w, i, n, m;
+    cin >> n >> m; //node,edge
+    for(i=0;i<m;i++){
+        cin >> u >> v >> w;
+        Edge node;
+        node.idx = v; node.w = w;
+        adj[u].push_back(node);
+    }
+    //從start連接到end的最短路徑
+    cin >> start >> end;
+    dijkstra(n, start);
+    if(dist[end]==INF) cout << "NO\n";
+    else cout << dist[end] <<"\n";
 	return 0;
 }

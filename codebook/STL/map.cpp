@@ -13,6 +13,6 @@ else
 auto iter = mymap.find("a");
 mymap.erase(iter);
 
-//遍歷
+//map遍歷
 for (auto it = mymap.begin(); it != mymap.end(); it++)
 cout << it->first << ", " << it->second << endl

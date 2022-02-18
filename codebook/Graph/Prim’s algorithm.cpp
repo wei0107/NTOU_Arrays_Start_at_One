@@ -1,4 +1,4 @@
-#define N 100
+#define MAX_V 100
 
 struct Edge {
 	int idx, w;
@@ -7,12 +7,10 @@ bool operator>(const Edge& lhs, const Edge& rhs) {
 	return lhs.w > rhs.w;    //兩條邊比較大小用邊權比較
 }
 
-vector<vector<Edge> > adj(N, vector<Edge>(N));
+vector<vector<Edge> > adj(MAX_V, vector<Edge>(MAX_V));
 priority_queue <Edge, vector<Edge>, greater<Edge> > pq;
-
 int prim_pq(int vn, int start) {
 	int tot = 0;
-
 	vector<bool> vis(vn, false);
 	vis[start] = true;
 
