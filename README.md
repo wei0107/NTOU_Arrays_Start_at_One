@@ -38,6 +38,7 @@ for(int i = 2; i < n; i++)
 ```cpp=
 //error
 for(j = i; i * j <= n; j++) 
+
 //correct
 for(j = 2; i * j <= n; j++)  
 for(j = i; i * j <= n; j+=i) 
@@ -49,11 +50,11 @@ for(j = i; i * j <= n; j+=i)
 因看錯題目要求，直覺用char來定義變數，多吃了兩次RE。
 
 * Debug筆記:
-RE -> <font color="red">型態錯誤</font>、out of range。
+RE -> <font color="red">**型態錯誤**</font>、out of range。
 
 #### J　字串水題（題目應看清楚）
 
-"add <font color="red">the least characters</font> achieving the goal."
+"add <font color="red">**the least characters**</font> achieving the goal."
 
 因看錯題目要求，多吃了兩次WA。
 
