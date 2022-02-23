@@ -52,6 +52,7 @@ for(j = i; i * j <= n; j+=i)
 
 * Debug筆記:
 RE -> <font color="red">**型態錯誤**</font>、out of range。
+
 <br>
 
 #### J　字串水題（題目應看清楚）
@@ -59,24 +60,28 @@ RE -> <font color="red">**型態錯誤**</font>、out of range。
 "add <font color="red">**the least characters**</font> achieving the goal."
 
 因看錯題目要求，多吃了兩次WA。
+
 <br>
 
 #### H　DP（題目應看清楚）
 
 1. 誤解題目
 2. 不會推導DP轉移式
+
 <br>
 
 #### I　二分搜(題目應先看)
 
 1. 不能只看測資
 2. 不能一昧的逃避浮點數
+
 <br>
 
 #### K　
 
 1. 不熟悉演算法模板
 2. 題單須做熟
+
 <br>
 
 #### 賽後檢討
