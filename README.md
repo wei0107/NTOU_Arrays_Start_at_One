@@ -77,7 +77,7 @@ RE -> <font color="red">**型態錯誤**</font>、out of range。
 
 <br>
 
-#### K　
+#### K　資料結構
 
 1. 不熟悉演算法模板
 2. 題單須做熟
