@@ -3,6 +3,11 @@ swap(a,b);
 min(a,b);
 max({ a, b, c });
 
+//二進制"1"的個數
+__builtin_popcount = int
+__builtin_popcountl = long int
+__builtin_popcountll = long long
+
 //math
 abs(x);
 pow(x);
