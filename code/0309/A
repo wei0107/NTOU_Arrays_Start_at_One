@@ -1,0 +1,46 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<cmath>
+#define ll long long
+
+using namespace std;
+
+int main() {
+
+	ll n, t, m, k, temp, i;
+	vector<int> a, tmp;
+	cin >> n >> k;
+
+	for (i = 0; i < 10; i++) {
+		cin >> temp;
+		a.push_back(temp);
+	}
+	bool ans = false;
+	for (int y = 0; y < pow(10, n); y++) {
+		ll x = k * y;
+		if (x >= pow(10, n)) break;
+		tmp = a;
+		string str = to_string(x) + to_string(y);
+		while (str.length() < 2 * n)str += "0";
+		bool found = true;
+		for (int i = 0; i < str.length(); i++) {
+			tmp[str[i] - '0']--;
+			if (tmp[str[i] - '0'] < 0) {
+				found = false;
+				break;
+			}
+		}
+		if (found) {
+			ans = true;
+			int xZero = n - to_string(x).length(),yZero= n - to_string(y).length();
+			for (int i = 0; i < xZero; i++)cout << "0";
+			cout << x << " ";
+			for (int i = 0; i < yZero; i++)cout << "0";
+			cout << y << "\n";
+		}
+	}
+	if (!ans)cout << "There are no solutions.\n";
+
+	return 0;
+}
