@@ -16,10 +16,12 @@ int main() {
 		cin >> temp;
 		a.push_back(temp);
 	}
+	
+	ll N=pow(10, n);
 	bool ans = false;
-	for (int y = 0; y < pow(10, n); y++) {
+	for (int y = 0; y < N; y++) {
 		ll x = k * y;
-		if (x >= pow(10, n)) break;
+		if (x >= N) break;
 		tmp = a;
 		string str = to_string(x) + to_string(y);
 		while (str.length() < 2 * n)str += "0";
