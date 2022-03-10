@@ -1,13 +1,13 @@
-#include<iostream>
-#include<vector>
-#include<string>
-#include<cmath>
+#include<bits/stdc++.h>
 #define ll long long
 
 using namespace std;
 
 int main() {
-
+	
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
+	
 	ll n, t, m, k, temp, i;
 	vector<int> a, tmp;
 	cin >> n >> k;
@@ -17,7 +17,7 @@ int main() {
 		a.push_back(temp);
 	}
 	
-	ll N=pow(10, n);
+	ll N = pow(10, n);
 	bool ans = false;
 	for (int y = 0; y < N; y++) {
 		ll x = k * y;
@@ -35,11 +35,8 @@ int main() {
 		}
 		if (found) {
 			ans = true;
-			int xZero = n - to_string(x).length(),yZero= n - to_string(y).length();
-			for (int i = 0; i < xZero; i++)cout << "0";
-			cout << x << " ";
-			for (int i = 0; i < yZero; i++)cout << "0";
-			cout << y << "\n";
+			cout << setw(n)<<setfill('0')<< x << " ";
+			cout << setw(n)<<setfill('0')<< y << "\n";
 		}
 	}
 	if (!ans)cout << "There are no solutions.\n";
