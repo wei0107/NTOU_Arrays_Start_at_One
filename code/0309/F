@@ -2,48 +2,42 @@
 #include<vector>
 #include<algorithm>
 #define ll long long
-
+ 
 using namespace std;
-
-bool cmp(pair<int, int> a, pair<int, int> b) {
+ 
+bool cmp(pair<ll, ll> a, pair<ll, ll> b) {
 	return a.first < b.first;
 }
 int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
 	ll n, k;
-	//pair<int, int> cost[2005][2005];
-	vector< vector <pair<int, int> > > cost;
-	//vector<vector<int>> dp(2005,vector<int>(2005));
+	vector< vector <pair<ll, ll> > > cost,dp;
 	cin >> n >> k;
 	for (int i = 0; i < n; i++) {
-		vector <pair<int, int> >p;
+		vector <pair<ll, ll> >p;
 		for (int j = 0, cst; j < k; j++) {
 			cin >> cst;
 			p.push_back({ cst,j });
 		}
 		cost.push_back(p);
-		sort(cost[i].begin(), cost[i].end(), cmp);
 	}
-	int sum1 = cost[0][0].first, sum2 = cost[0][1].first;
-	for (int i = 1,prei=cost[0][0].second; i < n; i++) {
-		if (cost[i][0].second==prei) {
-			sum1 += cost[i][1].first;
-			prei = cost[i][1].second;
+	dp = cost;
+	ll sum1 = cost[0][0].first, sum2 = cost[0][1].first;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < k; j++) {
+			if (i == 0) dp[i][j] = cost[i][j];
+			else {
+				if (cost[i][j].second == dp[i-1][0].second) {
+					dp[i][j].first = cost[i][j].first + dp[i - 1][1].first;
+				}
+				else {
+					dp[i][j].first = cost[i][j].first + dp[i - 1][0].first;
+				}
+			}
 		}
-		else {
-			sum1 += cost[i][0].first;
-			prei = cost[i][0].second;
-		}
+		sort(dp[i].begin(), dp[i].end(), cmp);
 	}
-	for (int i = 1,prei = cost[0][1].second; i < n; i++) {
-		if (cost[i][0].second == prei) {
-			sum2 += cost[i][1].first;
-			prei = cost[i][1].second;
-		}
-		else {
-			sum2 += cost[i][0].first;
-			prei = cost[i][0].second;
-		}
-	}
-	cout << min(sum1, sum2) << "\n";
+	cout << dp[n-1][0].first << "\n";
 	return 0;
 }
