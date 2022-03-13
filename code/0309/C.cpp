@@ -20,7 +20,8 @@ int main() {
 		e.push_back(temp);
 		f.push_back(temp);
 	}
-
+	
+	//前半枚舉
 	for (i = 0; i < a.size(); i++) {
 		for (j = 0; j < b.size(); j++) {
 			for (k = 0; k < c.size(); k++) {
@@ -29,7 +30,7 @@ int main() {
 			}
 		}
 	}
-	//cout << "\n";
+	//後半枚舉
 	for (i = 0; i < f.size(); i++) {
 		for (j = 0; j < e.size(); j++) {
 			for (k = 0; k < d.size(); k++) {
@@ -39,6 +40,7 @@ int main() {
 		}
 	}
 	sort(ans2.begin(), ans2.end());
+	//二分查找 (前半=後半)
 	for (i = 0; i < ans.size(); i++) {
 		sum += upper_bound(ans2.begin(), ans2.end(), ans[i]) - lower_bound(ans2.begin(), ans2.end(), ans[i]);
 	}
