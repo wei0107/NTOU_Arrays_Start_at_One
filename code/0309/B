@@ -12,17 +12,27 @@ int ans=0, upper, lower;
 vector<int> a;
 void merge(int l,int r){
     vector<int> suffix;
+    vector<int> prefix;
     int mid=(l+r)>>1, sum=0;
+    //後綴
     for(int i=mid;i>=l;i--){
         sum += a[i];
         suffix.push_back(sum);
     }
     sort(suffix.begin(),suffix.end());
     sum=0;
+    //前綴
     for(int i=mid+1;i<=r;i++){
         sum += a[i];
-        ans += upper_bound(suffix.begin(),suffix.end(),upper-sum)
-              -lower_bound(suffix.begin(),suffix.end(),lower-sum);
+        prefix.push_back(sum);
+    }
+    //二分查找
+    // suf+pre<=upper -> upper-pre>=suf
+    // lower<=suf+pre -> suf>=lower-pre
+    for(int i=0;i<prefix.size();i++){ 
+        // upper-pre >= suf >= lower-pre
+        ans += upper_bound(suffix.begin(),suffix.end(),upper-prefix[i])
+            -lower_bound(suffix.begin(),suffix.end(),lower-prefix[i]);
     }
 }
 
